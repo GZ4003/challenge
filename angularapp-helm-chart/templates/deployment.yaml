@@ -37,9 +37,6 @@ spec:
             - name: http
               containerPort: {{ .Values.service.port }}
               protocol: TCP
-          volumeMounts:
-          - name: angular-volume
-            mountPath: /usr/src/app/
           livenessProbe:
             httpGet:
               path: /
@@ -62,7 +59,3 @@ spec:
       tolerations:
         {{- toYaml . | nindent 8 }}
       {{- end }}
-      volumes:
-      - name: angular-volume
-        persistentVolumeClaim:
-          claimName: {{ include "angularapp-helm-chart.fullname" . }}-pvc
