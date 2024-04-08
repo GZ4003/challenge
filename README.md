@@ -22,7 +22,7 @@ docker-compose up --build
 
 #### Crear espacio de trabajo
 ```bash
-kubectl create namespace flask
+kubectl create namespace angular
 ```
 #### Crear secreto con la credenciales de Docker Hub 
 *Esto se hace para que Kubernetes pueda acceder a imagen a pesar que este publica*
