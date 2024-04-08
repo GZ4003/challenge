@@ -50,5 +50,5 @@ kubectl get svc
  ```bash
 minikube service angularapp-helm-chart -n angular
 ```
-* Se debe seleccionar la segunda IP *
+*Se debe seleccionar la segunda IP*
 *Con estos pasos, deberías poder levantar la aplicación tanto localmente utilizando Docker para poder usar nginx como microservicio, y kubernetes Helm Chart para desplegarlo*
