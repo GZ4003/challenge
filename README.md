@@ -8,8 +8,6 @@
 
 git clone <URL_DEL_REPOSITORIO>
 
-Una vez en el directorio creamos los ficheros que usaremos en este caso usaremos como microservicio NGINX por lo tanto creamos un Dockerfile y nginx.conf
-
 ### 2. Exposición de la aplicación como servicio mediante definición de Docker Compose.
 
 #### Construir la imagen Docker y exponerla con Nginx:
@@ -52,4 +50,4 @@ kubectl get svc
 minikube service angularapp-helm-chart -n angular
 ```
 * Se debe seleccionar la segunda IP *
-*Con estos pasos, deberías poder levantar la aplicación tanto localmente utilizando Docker como en un clúster de Kubernetes utilizando Helm. Asegúrate de seguir los pasos con cuidado y realizar las configuraciones necesarias según tus requisitos específicos.*
+*Con estos pasos, deberías poder levantar la aplicación tanto localmente utilizando Docker para poder usar nginx como microservicio, y kubernetes Helm Chart para desplegarlo*
