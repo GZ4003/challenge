@@ -4,11 +4,11 @@
 
 ## Para empezar a trabajar con este repositorio se deben seguir los siguentes pasos:
 
-### 1. Clonar el repositorio:
+### Clonar el repositorio:
 
 git clone <URL_DEL_REPOSITORIO>
 
-### 2. Exposición de la aplicación como servicio mediante definición de Docker Compose.
+### Exposición de la aplicación como servicio mediante definición de Docker Compose.
 
 #### Construir la imagen Docker y exponerla con Nginx:
 
@@ -29,9 +29,10 @@ kubectl create namespace angular
 ```bash
 kubectl create secret -n angular docker-registry angular-image \
     --docker-server=https://index.docker.io/v1/ \
-    --docker-username= \
-    --docker-password=
+    --docker-username=username \
+    --docker-password=password
 ```
+Se debe completar con las credeciales correspondientes.
 #### Desplegar la aplicación en Kubernetes:
 ```bash
 helm install angularapp-deploy . -n angular -f values.yaml  --debug
